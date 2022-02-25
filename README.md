@@ -10,7 +10,7 @@ Most of the Images that we see today have illumination effects in them, because 
 
 The method to tackle this was to take patches and cluster intensities in it. taking a class mean intensity will reduce the high intensity values present in a patch and will enhance low intensity values. Thus we can make better classification and our algorithm wont get mislead.
 
-The number of patches to consider was arbitrary and it does matter what the outputs we might get at the end.
+The number of patches to consider was arbitrary and it does matter what the outputs we might get at the end. I have kept the patches to be 64.
 
 In this algorithm, there is a requirement of patches to be in even powers of 2, because the algorithm is implemented in such a way and else it might throw error.
 # 2) Using YUV colour scheme to reduce the effect of illumination changes and segment.
