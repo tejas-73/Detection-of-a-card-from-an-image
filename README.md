@@ -26,3 +26,5 @@ The results for some images in the dataset were also not much perfectly segmente
 
 Also see that the final image has only two colours as far as method1 is concerned for the segmentation purpose. Method2 directly gives us segmentation of image.
 
+One can definitely try for more images!
+
