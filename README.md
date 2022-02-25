@@ -1,7 +1,7 @@
 # Detection-of-a-card-from-an-image
 Detection of a card from an image is a well recognised problem in computer vision. Here is a way to implement the same.
 
-I also tried on some apparel images.
+I also tried on some apparel images. Some House images. And the results are more or less quite convincing.
 # Methods of Implementation
 # 1) Using Patched K-Means Clustering and Averaging.
 Most of the Images that we see today have illumination effects in them, because of which, the clustering algorithm may get misled by unwanted clustering resulting in illumination artifacts.
