@@ -27,8 +27,8 @@ def create_image(patch_matrices_list, show_image=True):
             elif (i+1) % np.sqrt(len(patch_matrices_list)) == 0:
                 temp_matrix2 = np.append(temp_matrix2, temp_matrix1, axis=0)
     if show_image:
-        #img.fromarray(temp_matrix2).show()
-        img.fromarray(temp_matrix2).save("1.jpg")
+        img.fromarray(temp_matrix2).show()
+        #img.fromarray(temp_matrix2).save("1.jpg")
     return temp_matrix2
 
 
@@ -118,7 +118,7 @@ def increase_patch_size(patches):
 
 def method1(): #Considering commands for method 1
     patches = get_patches(np.array(img.open(path)), patches_size=patches_size)
-    #img.open(path).show()
+    img.open(path).show()
     for i in range(int(np.log2(patches_size))//2):
         patches = increase_patch_size(clustering(patches))
     clustering(patches)
@@ -168,10 +168,10 @@ def method2():  # Considering commands for method 2
         image_mats1[:, :, i] = np.multiply(image_mats[:, :, i], final_classification_array)
     for i in range(3):
         image_mats[:, :, i] = np.multiply(image_mats[:, :, i], 1 - final_classification_array)
-    # img.fromarray(image_mats1.astype(np.uint8)).show()
-    img.fromarray(image_mats1.astype(np.uint8)).save("2.jpg")
-    # img.fromarray(image_mats.astype(np.uint8)).show()
-    img.fromarray(image_mats.astype(np.uint8)).save("3.jpg")
+    img.fromarray(image_mats1.astype(np.uint8)).show()
+    #img.fromarray(image_mats1.astype(np.uint8)).save("2.jpg")
+    img.fromarray(image_mats.astype(np.uint8)).show()
+    #img.fromarray(image_mats.astype(np.uint8)).save("3.jpg")
     print(time.time() - start_time)
 
 
